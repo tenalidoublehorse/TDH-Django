@@ -3,8 +3,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 # Create your views here.
-from .models import BlogPost
-from .serializers import  BlogPostSerializer
+from .models import BlogPost,Banner
+from .serializers import  BlogPostSerializer,BannerSerializer
 
 
 @api_view(['GET'])
@@ -20,6 +20,16 @@ def getBpost(request,id):
         queryset = BlogPost.objects.get(id=id)
         serializer_data = BlogPostSerializer(queryset ,many=False)
         return Response(serializer_data.data)   
+
+@api_view(['GET'])
+def getBanner(request):
+    if request.method == 'GET':
+        queryset = Banner.objects.all()
+        serializer_data = BannerSerializer(queryset ,many=True)
+        return Response(serializer_data.data)
+    
+
+
 # @api_view(['POST'])
 # def deleteUser(request,id):
 #     if request.method == 'POST':

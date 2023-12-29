@@ -25,3 +25,10 @@ class BlogPost(models.Model):
 
     def __str__(self):
             return self.title
+
+class Banner(models.Model):
+    id = models.AutoField(primary_key=True)
+    Title = models.CharField(max_length=225)
+    Image = models.ImageField(upload_to='uploads/')
+    def __str__(self):
+            return self.Title
