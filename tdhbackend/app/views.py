@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 # Create your views here.
 from .models import BlogPost,Banner
-from .serializers import  BlogPostSerializer,BannerSerializer
+from .serializers import  BlogPostSerializer,BannerSerializer,IndusfoodsSerializer
 
 
 @api_view(['GET'])
@@ -24,32 +24,17 @@ def getBpost(request,id):
 @api_view(['GET'])
 def getBanner(request):
     if request.method == 'GET':
-        queryset = Banner.objects.all()
+        queryset = Banner.objects.order_by("SliderId")
         serializer_data = BannerSerializer(queryset ,many=True)
         return Response(serializer_data.data)
     
 
-
-# @api_view(['POST'])
-# def deleteUser(request,id):
-#     if request.method == 'POST':
-#         queryset = user.objects.get(UserID=id)
-#         queryset.UserStatus = False
-#         user_details = {  
-#                 'UserID':0,	
-#                 'EmailID' :'',	
-#                 'Password'  :'',	
-#                 'Role':'',	
-#                 'UserStatus':'',		
-#         }
-#         user_details['UserID'] = queryset.UserID
-#         user_details['EmailID'] = queryset.EmailID
-#         user_details['Password'] = queryset.Password
-#         user_details['Role'] = queryset.Role
-#         user_details['UserStatus'] = queryset.UserStatus
-       
-#         serializer_data = UserSerializer(instance=queryset ,data = user_details)
-#         if serializer_data.is_valid():
-#             serializer_data.save()
-#         return Response(serializer_data.data)
+@api_view(['POST'])
+def addIndusData(request):
+    if request.method == 'POST':
+        indus_data = IndusfoodsSerializer(data = request.data)
+        if indus_data.is_valid():
+            indus_data.save()
+            return Response(indus_data.initial_data, status=status.HTTP_201_CREATED)
+        return Response(indus_data.errors, status=status.HTTP_400_BAD_REQUEST)
      
