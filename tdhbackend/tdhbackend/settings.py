@@ -15,6 +15,7 @@ from .jazzmin import JAZZMIN_SETTINGS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -137,7 +138,7 @@ UPLOAD_ROOT = os.path.join(BASE_DIR, 'upload')
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 if DEBUG:
-    STATICFILES_DIRS = []
+    STATICFILES_DIRS = [STATIC_DIR,]
 else:
     STATIC_ROOT = os.path.join(BASE_DIR,'static')
     

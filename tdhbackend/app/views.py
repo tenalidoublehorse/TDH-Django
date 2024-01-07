@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 # Create your views here.
-from .models import BlogPost,Banner
+from .models import BlogPost,Banner,IndusData
 from .serializers import  BlogPostSerializer,BannerSerializer,IndusfoodsSerializer
 
 
@@ -37,4 +37,10 @@ def addIndusData(request):
             indus_data.save()
             return Response(indus_data.initial_data, status=status.HTTP_201_CREATED)
         return Response(indus_data.errors, status=status.HTTP_400_BAD_REQUEST)
-     
+
+@api_view(['GET'])
+def getIndusData(request):
+    if request.method == 'GET':
+        queryset = IndusData.objects.all()
+        serializer_data = IndusfoodsSerializer(queryset ,many=True)
+        return Response(serializer_data.data)
