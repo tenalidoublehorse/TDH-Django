@@ -10,6 +10,7 @@
 # activate virtual environment
 #env-tdh\Scripts\activate
 
+
 # install libs
 pip freeze > requirements.txt 
 pip install -r requirements.txt
