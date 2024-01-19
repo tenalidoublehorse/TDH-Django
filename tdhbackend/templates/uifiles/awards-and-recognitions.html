@@ -1,0 +1,157 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+ <!-- Start Banner Area -->
+ <section class="banner-area organic-breadcrumb"
+ style="background-image: url(/static/assets/img/awards-and-recognitions/tdh-awards-recoginations.png);">
+ <div class="container">
+     <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+         <!-- <div class="col-first">
+             <h1>Shop Category page</h1>
+             <nav class="d-flex align-items-center">
+                 <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                 <a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
+                 <a href="category.html">Fashon Category</a>
+             </nav>
+         </div> -->
+     </div>
+ </div>
+</section>
+<!-- End Banner Area -->
+
+	   <!----Start Subpages Section----->
+	   <div class="container-fluid submenu-section bg-danger">
+        <div class="sub-pages-menu">
+            <ul class="d-flex justify-content-around align-items-center p-3">
+                <li>
+                    <a href="/the-journey/">The Journey</a>
+                </li>
+                <li>
+                    <a href="/where-we-are/">Where We Are</a>
+                </li>
+                <li>
+                    <a href="/awards-recognitions/">Awards & Recognitions</a>
+                </li>
+                <li>
+                    <a href="/csr-initiatives/">CSR Initiatives</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!-----End Subpages section----->
+
+
+
+
+
+<!--Start Blog Area--->
+<section class="blog-sec pt-5 pb-5">
+ <h2 class="head-title pb-5">Honors and Accolades That Define Us</h2>
+ <div class="container">
+     <div class="row awards">
+         <div class="col-lg-4 col-sm-12 pb-5">
+             <div class="card blog-card shadow">
+                 <img class="card-img-top" src="{% static 'assets/img/awards-and-recognitions/ek-bharat-shreshta-bharat.png' %}" alt="Card image">
+                 <div class="card-body">
+                     <div class="blog-text d-flex justify-content-between">
+                         <h4 class="card-title">2023</h4>
+                         <a href="#myModal" class="btn btn-primary btn-md" data-bs-toggle="modal">View</a>
+                     </div>
+                         <h6 class="pt-2">Ek Bharat Shreshta Bharat</h6>
+                 </div>
+             </div>
+         </div>
+
+
+         <div class="col-lg-4 col-sm-12 pb-5">
+             <div class="card blog-card shadow">
+                 <img class="card-img-top" src="{% static 'assets/img/awards-and-recognitions/yapararatna.png' %}"
+                     alt="Card image">
+                 <div class="card-body ">
+                     <div class="blog-text d-flex justify-content-between">
+                         <h4 class="card-title">2023</h4>
+                         <a href="#myModal1" class="btn btn-primary btn-md" data-bs-toggle="modal">View</a>
+                     </div>
+                         <h6 class="pt-2"> Vyapararatna</h6>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-lg-4 col-sm-12 pb-5">
+             <div class="card blog-card shadow">
+                 <img class="card-img-top" src="{% static 'assets/img/awards-and-recognitions/the-best-food-product.png' %}"
+                     alt="Card image">
+                 <div class="card-body ">
+                     <div class="blog-text d-flex justify-content-between">
+                         <h4 class="card-title">2023</h4>
+                         <a href="#myModal2" class="btn btn-primary btn-md" data-bs-toggle="modal">View</a>
+                     </div>
+                         <h6 class="pt-2">Best Food Products Company of The Year</h6>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+ </div>
+</section>
+<!--End Blog Area--->
+
+
+<div class="modal" id="myModal">
+ <div class="modal-dialog">
+     <div class="modal-content">
+         <div class="modal-header">
+             <img src="{% static 'assets/img/awards-and-recognitions/ek-bharat-shreshta-bharat.png' %}" alt="" width="465">
+             <button type="button" class="btn-close" data-bs-dismiss="modal">X</button>
+         </div>
+
+         <div class="modal-body">
+           <h4>2023</h4>
+           <h4>Ek Bharat Shreshta Bharat</h4>
+           <p class="pt-3">Our MD, Mohan Shyam Prasad Garu, Felicated By The Honourable Governor of Tamil Nadu Thiru R.N.Ravi During EK Bharat Shreshta Bharat Programme.</p>
+         </div>
+     </div>
+
+ </div>
+</div>
+
+<div class="modal" id="myModal1">
+ <div class="modal-dialog">
+     <div class="modal-content">
+         <div class="modal-header">
+             <img src="{% static 'assets/img/awards-and-recognitions/yapararatna.png' %}" alt="" width="465">
+             <button type="button" class="btn-close" data-bs-dismiss="modal">X</button>
+         </div>
+
+         <div class="modal-body">
+           <h4>2023</h4>
+           <h4>Vyapararatna</h4>
+           <p class="pt-3">The awarding of the Vyapararatna title to Mr. Shyam Prasad Garu by the Akkineni Foundation of America is a momentous occasion of great significance. This prestigious recognition highlights Mr. Shyam Prasad Garu's remarkable accomplishments and contributions in the field of business and philanthropy.</p>
+         </div>
+     </div>
+
+ </div>
+</div>
+
+<div class="modal" id="myModal2">
+ <div class="modal-dialog">
+     <div class="modal-content">
+         <div class="modal-header">
+             <img src="{% static 'assets/img/awards-and-recognitions/the-best-food-product.png' %}" alt="" width="465">
+             <button type="button" class="btn-close" data-bs-dismiss="modal">X</button>
+         </div>
+
+         <div class="modal-body">
+           <h4>2023</h4>
+           <h4>Best Food Products Company of The Year</h4>
+           <p class="pt-3">Tenali Double Horse, a name synonymous with quality and authenticity in the world of food products, has achieved a remarkable milestone by being honored with the prestigious Best Food Products Company of the Year award at the Hybiz TV Business Excellence Awards. This accolade underscores the brand's unwavering commitment to delivering top-notch food products that have won the hearts of consumers far and wide</p>
+         </div>
+     </div>
+
+ </div>
+</div>
+
+
+{% endblock %}

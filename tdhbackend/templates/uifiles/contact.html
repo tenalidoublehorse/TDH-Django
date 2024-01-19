@@ -1,0 +1,242 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb"
+style="background-image: url(/static/assets/img/contact/Contact-us-page-banner.png);">
+<div class="container">
+    <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+        <div class="col-first">
+            <h1>Contact Us</h1>
+            <nav class="d-flex align-items-center">
+                <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                <a href="category.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+</div>
+</section>
+<!-- End Banner Area -->
+
+
+<!----contact form section start--->
+<section class="contact-info-sec pt-5 pb-5" style="background-color: #fff7ef;">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-7 d-flex align-items-center mx-auto">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2>Honors and Accolades That Define Us</h2>
+                    <p>Find our corporate and factory addresses along with contact information. We're here to
+                        assist you. Feel free to get in touch for inquiries, feedback, or any assistance you
+                        need.</p>
+                </div>
+                <div class="row contact-info d-flex pt-4">
+                    <div class="col-lg-6 pb-3">
+                        <div class="card shadow-toll">
+                            <i class="fas fa-phone-alt text-danger"></i>
+                            <h4 class="text-danger">Toll Free Number</h4>
+                            <a class="pt-2" href="tel:+1800 270 567567">1800 270 567567</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card shadow-toll">
+                            <i class="fas fa-envelope text-danger"></i>
+                            <h4 class="text-danger">Toll Free Number</h4>
+                            <a class="pt-2"
+                                href="mailto:info@tenalidoublehorse.com">info@tenalidoublehorse.com</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-5">
+            <div class="form-info">
+                <form class="form-width shadow-form px-3 bg-light pb-4 pt-4" style="border-radius: 8px;">
+                    <div class="form-mess">
+                        <p class="py-3 text-center text-danger">We Value Your Input</p>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <input type="text" placeholder="First Name" required="" class="form-control"
+                                name="fname" pattern="[A-Za-z]+" value="">
+                        </div>
+                        <div class="form-group col-lg-6"><input type="text" placeholder="Last Name" required=""
+                                class="form-control" name="lname" pattern="[A-Za-z]+" value=""></div>
+                        <div class="form-group col-lg-12"><input type="text" placeholder="Email Address"
+                                required="" class="form-control" name="email" value=""></div>
+                        <div class="form-group col-lg-6"><input type="text" placeholder="Phone no" required=""
+                                class="form-control" name="Phonenumber" pattern="[0-9]*" maxlength="10"
+                                value=""></div>
+                        <div class="form-group col-lg-6">
+                            <select class="form-control" name="purpose" required="">
+                                <option value="" disabled="">Purpose of Contact</option>
+                                <option value="export">Export</option>
+                                <option value="distribution">Distribution Enquiry</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Suggestions">Suggestions</option>
+                                <option value="Other">Job Enquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="text" placeholder="Subject" required="" class="form-control"
+                                name="subject" pattern="[A-Za-z.,]+" maxlength="50" value="">
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <textarea name="message" class="form-control" required=""
+                                placeholder="Type your message" rows="3" pattern="[A-Za-z.,]+"
+                                maxlength="50"></textarea>
+                        </div>
+                    </div>
+                    <a class="genric-btn danger" href="#">Send Message</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+<!----contact form section end--->
+
+
+<!----office location section start--->
+<section class="office-location-sec pt-5 pb-5">
+<div class="container">
+    <h2 class="head-title">Our Office & Factory Location</h2>
+    <div class="row">
+    
+        <div class="col-lg-6">
+            <div class="regional-add mb-5 p-4" style="background-color: #f5f5f5;">
+                <h4 class="text-danger">Regional Office Address</h4>
+                <p>
+                    <i class="fas fa-phone-alt text-danger-1"></i> 1800 270 567567
+
+                </p>
+                <div class="d-flex">
+                    <i class="fas fa-location-arrow pr-2 text-danger-1" style="text-align: justify;"></i>
+                    <p>JK TOWERS, 8-2-293/82/B/S-7, 2nd Floor, Road Number 10C, Gayatri Hills, Jubilee Hills, Hyderabad, Telangana 500033</p>
+                </div>
+
+                <a class="genric-btn danger mt-4" href="#">Get Directions</a>
+
+            </div>
+
+            <div class="regional-add p-4" style="background-color: #f5f5f5;">
+                <h4 class="text-danger">Factory Address</h4>
+                <p>
+                    <i class="fas fa-phone-alt text-danger-1"></i> 1800 270 567567
+
+                </p>
+                <div class="d-flex">
+                    <i class="fas fa-location-arrow pr-2 text-danger-1" style="text-align: justify;"></i>
+                    <p>JK TOWERS, 8-2-293/82/B/S-7, 2nd Floor, Road Number 10C, Gayatri Hills, Jubilee Hills, Hyderabad, Telangana 500033</p>
+                </div>
+
+                <a class="genric-btn danger mt-4" href="#">Get Directions</a>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6">
+            <div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13"
+            data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia." data-mlat="40.701083"
+            data-mlon="-74.1522848">
+        </div>
+        </div>
+
+    </div>
+</div>
+
+</section>
+<!----office location section start--->
+
+
+<!-----Where Innovation section Start--------->
+<section class="pb-5 pt-5 industry-sec" style="background-color: #fff7ef;">
+<div class="container">
+<h2 class="head-title">Where Innovation Takes Shape</h2>
+<p class="content-text mx-auto text-center">For inquiries about our factory locations and more</p>
+<div class="row">
+    <div class="col-lg-3 industry-address">
+        <div class="card-location">
+            <div class="card-body">
+                <i class="fas fa-industry" style="color: #f44a40;font-size:40px;"></i>
+                <p class="card-title pt-2">MAHENDRA DALL MILL</p>
+                <p class="pt-3">P.No.37,47,48,49&49A, AutoNagar,Somasundarapalem, Kattevaram(Post),522295, TENALI,Guntur, A.P</p>
+                <div>
+                <a href="tel:+91 9666389389"><i class="fas fa-phone-alt text-danger"></i> <span>9666389389</span></a>
+                </div>
+
+                <div>
+                    <a href="mailto:mahindradallmill9@gmail.com"><i class="fas fa-envelope text-danger"></i> <span>mahindradallmill9@gmail.com</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 industry-address">
+        <div class="card-location">
+            <div class="card-body">
+                <i class="fas fa-industry" style="color: #f44a40;font-size:40px;"></i>
+                <p class="card-title pt-2">MAHARANI DALL MILL</p>
+                <p class="pt-3">Plot.No.38,39,40,AutoNagar, Somasundarapalem, Kattevaram(Post)–522295, TENALI, Guntur Dist, A.P</p>
+                <div>
+                <a href="tel:+91 85019 69798"><i class="fas fa-phone-alt text-danger"></i> <span>
+                    +91 85019 69798</span></a>
+                </div>
+
+                <div>
+                    <a href="mailto:maharanidallmill@gmail.com"><i class="fas fa-envelope text-danger "></i> <span>maharanidallmill@gmail.com</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 industry-address">
+        <div class="card-location">
+            <div class="card-body">
+                <i class="fas fa-industry" style="color: #f44a40;font-size:40px;"></i>
+                <p class="card-title pt-2">MAHADEVA DALL INDUSTRIES PVT LTD</p>
+                <p class="pt-3">Nandivelugu, Nandivelugu (Post) – 522 306 TENALI, Guntur Dist, A.P</p>
+                <div>
+                <a href="tel:+91 91333 45456"><i class="fas fa-phone-alt text-danger"></i> <span>
+                    +91 91333 45456</span></a>
+                </div>
+
+                <div>
+                    <a href="mailto:maharanidallmill@gmail.com"><i class="fas fa-envelope text-danger "></i> <span>maharanidallmill@gmail.com</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 industry-address">
+        <div class="card-location">
+            <div class="card-body">
+                <i class="fas fa-industry" style="color: #f44a40;font-size:40px;"></i>
+                <p class="card-title pt-2">TENALI DOUBLE HORSE FOODS PVT LIMITED</p>
+                <p class="pt-1">60 A, AUTONAGAR, TENALI, GUNTUR, ANDHRA PRADESH - 522295, Tenali, Andhra Pradesh 530012</p>
+                <div>
+                <a href="tel:+91 8187896075"><i class="fas fa-phone-alt text-danger"></i> <span>
+                    8187896075</span></a>
+                </div>
+
+                <div>
+                    <a href="mailto:tenalidoublehorsefoods@gmail.com"><i class="fas fa-envelope text-danger"></i> <span>tenalidoublehorsefoods</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-----Where Innovation section End--------->
+
+{% endblock %}

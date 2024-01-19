@@ -1,0 +1,497 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb"
+    style="background-image: url(/static/assets/img/tdh-products/tenali-double-horse-products-banner.png);">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Blog Page</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="category.html">Blog</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Banner Area -->
+
+
+<!--- Start products section----->
+<div class="section countries-products-sec pt-5" style="background-color: #fff7ef;">
+    <div class="container">
+        <div class="row products-countries-sec owl-carousel">
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/india.png' %}" alt="">
+                <h5>India</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/usa.png' %}" alt="">
+                <h5>USA</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/Uae.png' %}" alt="">
+                <h5>UAE</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/Qatar.png' %}" alt="">
+                <h5>Qatar</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/SouthAfrica.png' %}" alt="">
+                <h5>South Africa</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/ghana.png' %}" alt="">
+                <h5>Ghana</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/seychelles.png' %}" alt="">
+                <h5>Seychelles</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/Singapore.png' %}" alt="">
+                <h5>Singapore</h5>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/Paris.png' %}" alt="">
+                <h5>Paris</h5>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/Uk.png' %}" alt="">
+                <h5>UK</h5>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/Austraila.png' %}" alt="">
+                <h5>Austraila</h5>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <img src="{% static 'assets/img/tdh-products/Europe.png' %}" alt="">
+                <h5>Europe</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--- Start products section----->
+
+<section>
+    <div class="container products-nav-tabs-sec">
+        <ul class="nav nav-pills products-nav-list d-flex justify-content-center align-items-center pb-4 pt-5"
+            role="tablist">
+            <li class="nav-item">
+                <a href="#consumerpacks" class="nav-link active" data-bs-toggle="pill">Consumer Packs</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#bulkpacks" class="nav-link" data-bs-toggle="pill">Bulk Packs</a>
+            </li>
+        </ul>
+
+        <div class="tab-content pb-5">
+            <div id="consumerpacks" class="container tab-pane active">
+                <div class="row">
+                    <div class="countries-products col-lg-4 col-sm-12">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                               <a href="/product-details/"> <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Urad-gota.png' %}"
+                                    alt=""></a>
+                                <div class="product-details">
+                                   <a href="/product-details/"> <h6 class="card-title text-center">Premium Urad Gota</h6></a>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="#productModl" class="social-info" data-bs-toggle="modal">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="countries-products col-lg-4 col-sm-12">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Chana-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Chana Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Moong-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Moong Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12 pt-4">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-toor-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Toor Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12 pt-4">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Urad-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Urad Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12 pt-4">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Urad-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Urad Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bulkpacks" class="container tab-pane">
+                <div class="row">
+                    <div class="countries-products col-lg-4 col-sm-12">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-idly-rava.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Urad Gota</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="/product-details/" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="countries-products col-lg-4 col-sm-12">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Chana-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Chana Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="/product-details/" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Moong-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Moong Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12 pt-4">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-toor-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Toor Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12 pt-4">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Urad-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Urad Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="countries-products col-lg-4 col-sm-12 pt-4">
+                        <div class="slider-item-card">
+                            <div class="single-product card p-4">
+                                <img class="img-fluid"
+                                    src="{% static 'assets/img/tdh-products/tenalidoublehorse-dubai-Urad-dall.png' %}"
+                                    alt="">
+                                <div class="product-details">
+                                    <h6 class="card-title text-center">Premium Urad Dall</h6>
+                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing
+                                        elit.
+                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="prd-bottom ">
+                                            <a href="single-product.html" class="social-info">
+                                                <span class="lnr lnr-move"></span>
+                                                <p class="hover-text">view more</p>
+                                            </a>
+                                            <a href="" class="social-info">
+                                                <span class="lnr ti-bag"></span>
+                                                <p class="hover-text">Shop Now</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<div class="modal" id="productModl">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                    <h6>Product Details</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">X</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-4  product-popup-slider owl-carousel">
+                        <img src="{% static 'assets/img/product-details/uradagota-sample-1.png' %}" alt="" width="268" height="100%">
+                        <img src="{% static 'assets/img/product-details/uradagota-sample-2.png' %}" alt="">
+                        <img src="{% static 'assets/img/product-details/uradagota-sample-3.png' %}" alt="">
+                        <img src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Gota-300x300.png' %}" alt="">
+                    </div>
+
+                    <div class="col-lg-8">
+                        <h2> Premium Idly Ravva 1Kg</h2>
+                        <p>Fine-textured semolina is used to make traditional South Indian idlis, offering a fluffy and nutritious breakfast option.</p>
+                    </div>
+
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!---- End products section ---->
+{% endblock %}

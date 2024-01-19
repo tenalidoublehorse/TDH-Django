@@ -7,6 +7,47 @@ from .models import BlogPost,Banner,IndusData
 from .serializers import  BlogPostSerializer,BannerSerializer,IndusfoodsSerializer
 
 
+def index(request):
+    return render(request, 'uifiles/index.html')
+
+def the_journey(request):
+    return render(request, 'uifiles/thejourney.html')
+
+def where_we_are(request):
+    return render(request, 'uifiles/where-we-are.html')
+
+def awards_recognitions(request):
+    return render (request, 'uifiles/awards-and-recognitions.html')
+
+def csr_initiatives(request):
+    return render(request, 'uifiles/csr-initiatives.html')
+
+def csr_gallery(request):
+    return render(request, 'uifiles/csr-gallery.html')
+
+def csr_gallery_two(request):
+    return render(request, 'uifiles/csr-gallery-two.html')
+
+def tdh_products(request):
+    return render(request, 'uifiles/tdh-products.html')
+
+def product_details(request):
+    return render(request, 'uifiles/product-details.html')
+
+def news_room(request):
+    return render(request, 'uifiles/news-room.html')
+
+def news_room_two(request):
+    return render(request, 'uifiles/news-room-two.html')
+
+def news_room_three(request):
+    return render(request, 'uifiles/news-room-three.html')
+
+def contact(request):
+    return render(request, 'uifiles/contact.html')
+
+
+
 @api_view(['GET'])
 def getBlogpost(request):
     if request.method == 'GET':

@@ -1,0 +1,68 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb" style="background-image: url(/static/assets/img/csr-initiatives/tdh-csr-activities.png);">
+        <div class="container">
+            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+                <!-- <div class="col-first">
+					<h1>Shop Category page</h1>
+					<nav class="d-flex align-items-center">
+						<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
+						<a href="category.html">Fashon Category</a>
+					</nav>
+				</div> -->
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+
+    
+	   <!----Start Subpages Section----->
+	   <div class="container-fluid submenu-section bg-danger">
+        <div class="sub-pages-menu">
+            <ul class="d-flex justify-content-around align-items-center p-3">
+                <li>
+                    <a href="/the-journey/">The Journey</a>
+                </li>
+                <li>
+                    <a href="/where-we-are/">Where We Are</a>
+                </li>
+                <li>
+                    <a href="/awards-recognitions/">Awards & Recognitions</a>
+                </li>
+                <li>
+                    <a href="/csr-initiatives/">CSR Initiatives</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!-----End Subpages section----->
+
+
+    <!--Start Blog Area--->
+    <section class="blog-sec pt-5 pb-5">
+        <h2 class="head-title pb-5">Empowering Our Community</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card phirse-udan">
+                        <img src="{% static 'assets/img/csr-initiatives/Uddasn.png' %}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Phir Se Udaan</h4>
+                            <p class="mx-1 pt-3">Phir Se Udaan is an initiative by your favourite Tenali Double Horse . With a vision to empower women inside and outside the house,</p>
+                            <a href="/csr-gallery/" class="phirse-udan-link">Read More<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Blog Area--->
+
+
+{% endblock %}

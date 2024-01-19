@@ -1,0 +1,118 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb" style="background-image: url(/static/assets/img/news-room/tenali-double-horse-news-room-banner.png);">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <!-- <div class="col-first">
+                <h1>Shop Category page</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="category.html">Fashon Category</a>
+                </nav>
+            </div> -->
+        </div>
+    </div>
+</section>
+<!-- End Banner Area -->
+
+
+<!--Start Blog Area--->
+<section class="blog-sec pt-5 pb-5">
+    <h4 class="head-title text-danger">Get real-time updates on events</h4>
+    <h2 class="head-title pb-5">That Impact Our World</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 csr-gallery">
+                <div class="top-red-line-1"></div>
+                <div class="card card-imgae">
+                    <a href="{% static 'assets/img/news-room/divali-enadu-paper-adv-7.png' %}">
+                   <img src="{% static 'assets/img/news-room/divali-enadu-paper-adv-7.png' %}" alt="" width="350">
+                    </a> 
+                </div>
+                <div class="top-red-line-2"></div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12 csr-gallery">
+                <div class="top-red-line-1"></div>
+                <div class="card card-imgae">
+                    <a href="{% static 'assets/img/news-room/nutrition-powder-packets-distributed-eight.png' %}">
+                   <img src="{% static 'assets/img/news-room/nutrition-powder-packets-distributed-eight.png' %}" alt="" width="350">
+                    </a> 
+                </div>
+                <div class="top-red-line-2"></div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12 csr-gallery">
+                <div class="top-red-line-1"></div>
+                <div class="card card-imgae">
+                    <a href="{% static 'assets/img/news-room/Leprosy-nine.png' %}">
+                   <img src="{% static 'assets/img/news-room/Leprosy-nine.png' %}" alt="" width="350">
+                    </a> 
+                </div>
+                <div class="top-red-line-2"></div>
+            </div>
+        </div>
+
+
+        <div class="row my-5">
+            <div class="col-lg-4 col-sm-12 csr-gallery" >
+                <div class="top-red-line-1"></div>
+                <div class="card card-imgae">
+                    <a href="{% static 'assets/img/news-room/merite-scoller-two-ten.png' %}">
+                   <img src="{% static 'assets/img/news-room/merite-scoller-two-ten.png' %}" alt="" width="350">
+                    </a> 
+                </div>
+                <div class="top-red-line-2"></div>
+            </div>
+            <div class="col-lg-4 col-sm-12 csr-gallery">
+                <div class="top-red-line-1"></div>
+                <div class="card card-imgae">
+                    <a href="{% static 'assets/img/news-room/tenali-double-horse-all-products-img-11.png' %}">
+                   <img src="{% static 'assets/img/news-room/tenali-double-horse-all-products-img-11.png' %}" alt="" width="350">
+                    </a> 
+                </div>
+                <div class="top-red-line-2"></div>
+            </div>
+            <div class="col-lg-4 col-sm-12 csr-gallery">
+                <div class="top-red-line-1"></div>
+                <div class="card card-imgae">
+                    <a href="{% static 'assets/img/news-room/the-changemaker-of-india-12.png' %}">
+                   <img src="{% static 'assets/img/news-room/the-changemaker-of-india-12.png' %}" alt="" width="350">
+                    </a> 
+                </div>
+                <div class="top-red-line-2"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--End Blog Area--->
+
+
+<!----Start Pagination Section---->
+        <section class="pb-5 pagination-sec">
+            <ul class="paginations d-flex justify-content-center align-items-center">
+                <li>
+                    <a class="bg-color" href="/news-room/">Previous</a>
+                </li>
+                <li>
+                    <a class="normal-link" href="/news-room/">1</a>
+                </li>
+                <li>
+                    <a class="active" href="/news-room-two/">2</a>
+                </li>
+                <li>
+                    <a class="normal-link" href="/news-room-three/">3</a>
+                </li>
+
+                <li>
+                    <a class="bg-color" href="/news-room-three/">Next</a>
+                </li>
+        </section>
+<!----End Pagination Section---->
+
+{% endblock %}
