@@ -694,7 +694,26 @@ $(".product-popup-slider").owlCarousel({
 
 
 
- 
+
 
  
+
+document.addEventListener('DOMContentLoaded', function () {
+// Get the "Get Directions" hyperlink button
+var getDirectionsButton = document.querySelector('.genric-btn.danger');
+
+// Add a click event listener to the button
+getDirectionsButton.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default hyperlink behavior
+
+    // Get the address from the paragraph element
+    var address = document.querySelector('.regional-add p:last-child').innerText.trim();
+
+    // Create the Google Maps URL with the address
+    var mapsURL = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(address);
+
+    // Open the URL in a new tab/window
+    window.open(mapsURL, '_blank');
+});
+});
  
