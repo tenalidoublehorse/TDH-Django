@@ -4,6 +4,34 @@ from ckeditor.fields import RichTextField
 from django.utils import timezone
 # Create your models here.
 
+ProductType = [
+      ('Consumer_pack','Consumer_pack'),
+      ('Commercial_pack','Commercial_pack')
+]
+
+
+class Products(models.Model):
+    Products_id = models.AutoField(primary_key=True)
+    Title = models.CharField(max_length=100)
+    Product_type = models.CharField(max_length=200,choices=ProductType,null=True,default="")
+    Short_desc = models.CharField(max_length=200)
+    Long_desc = models.CharField(max_length=1000)
+    Upload_url = models.URLField(default="")
+    Body = RichTextField(max_length=1000)
+    Slug = models.CharField(max_length=200,unique=True,null=True)
+    Image1 = models.ImageField(upload_to='uploads/')
+    Image2 = models.ImageField(upload_to='uploads/')
+    Image3 = models.ImageField(upload_to='uploads/')
+    Image4 = models.ImageField(upload_to='uploads/')
+    Image5 = models.ImageField(upload_to='uploads/')
+
+
+    def __str__(self):
+          return self.Title
+    
+
+
+
 
 STATUS = (
     (0,"Draft"),

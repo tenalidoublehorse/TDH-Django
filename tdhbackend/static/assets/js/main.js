@@ -1,4 +1,43 @@
 
+  // Function to generate and download the Broacher
+  function downloadBroacher() {
+    // Sample content for the PDF
+    var pdfContent = [
+        { text: 'PDF Document', style: 'header' },
+        'This is a sample PDF document generated using pdfmake.',
+        { text: 'PDF Content', style: 'subheader' },
+        'You can customize the content based on your requirements.',
+    ];
+
+    // Define styles for the PDF content
+    var styles = {
+        header: { fontSize: 18, bold: true },
+        subheader: { fontSize: 14, bold: true, margin: [0, 10, 0, 5] },
+    };
+
+    // Create a PDF document
+    var pdfDoc = {
+        content: pdfContent,
+        styles: styles,
+    };
+
+    // Generate and download the PDF
+    pdfmake.createPdf(pdfDoc).download('tenali-double-horse-info');
+}
+
+
+$(document).ready(function(){
+  $('#btn-submit').click(function(){
+     let firstname = $('#fname').val()
+     let lastname = $('#lname').val()
+     let email = $('#email').val()
+     let phonenumber = $('#phonenumber').val()
+     let purpose = $('')
+  })
+})
+
+
+
 $(document).ready(function(){
 	"use strict";
 
@@ -717,3 +756,6 @@ getDirectionsButton.addEventListener('click', function (event) {
 });
 });
  
+
+
+

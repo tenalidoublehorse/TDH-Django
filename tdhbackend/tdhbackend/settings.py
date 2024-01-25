@@ -17,6 +17,7 @@ from .jazzmin import JAZZMIN_SETTINGS
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+PDF_DIR  = os.path.join(BASE_DIR,"pdf")
 
 
 # Quick-start development settings - unsuitable for production
@@ -135,9 +136,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 UPLOAD_URL ='uploads/'
-MEDIA_URL = 'media/'
+# MEDIA_URL = 'media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 UPLOAD_ROOT = os.path.join(BASE_DIR, 'upload')
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 

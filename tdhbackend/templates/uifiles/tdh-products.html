@@ -98,27 +98,25 @@
         <div class="tab-content pb-5">
             <div id="consumerpacks" class="container tab-pane active">
                 <div class="row">
+                    {% for i in consumer_items %}
                     <div class="countries-products col-lg-4 col-sm-12">
                         <div class="product-items-info">
                             <div class="single-product card p-4">
-                               <a href="/product-details/"> <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/Tenali-Double-Horse-Urad-Gota-300x300.png' %}"
+                               <a href="/product-details/{{i.Slug}}"> <img class="img-fluid"
+                                    src="{{i.Image2.url}}"
                                     alt=""></a>
                                 <div class="product-details">
-                                   <a href="/product-details/"> <h6 class="card-title text-center">Premium Urad Gota 1Kg</h6></a>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                   <a href="/product-details/{{i.Slug}}"> <h6 class="card-title text-center">{{i.Title}}</h6></a>
+                                    <p class="card-text text-justify">{{i.Short_desc}}</p>
                                     <div class="d-flex justify-content-center">
                                         <div class="prd-bottom ">
                                             <a href="#productModl" class="social-info" data-bs-toggle="modal">
                                                 <span class="lnr lnr-move"></span>
                                                 <p class="hover-text">view more</p>
                                             </a>
-                                            <a href="" class="social-info">
+                                            <a href="#" class="social-info">
                                                 <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
+                                                <p class="hover-text">Shop More</p>
                                             </a>
                                         </div>
                                     </div>
@@ -126,265 +124,30 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/Tenali-Double-Horse-Urad-Dall-300x300.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">High Protein Maharani Urad Gota 1Kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/Tenali-Double-Horse-Urad-Dal-300x300.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Urad Dall 1Kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-idly-rava-300x300.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Idly Ravva 1Kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/Tenali-Double-Horse-Toor-Dall-300x300.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Toor Dall 1Kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/Tenali-Double-horse-Moong-Dal-300x300.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Moong Dall 1/2Kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-chana-dall.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Chana Dall 1/2Kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/Tenali-Double-Horse-Husked-Polish-Urad-dall-300x300.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Husked Black Gram Dall 1kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/Tenali-Double-Horse-Black-Gram-Rounds-300x300.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Black Gram 1kg</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
 
+
             <div id="bulkpacks" class="container tab-pane">
                 <div class="row">
+                    {% for info in comercial_items %}
                     <div class="countries-products col-lg-4 col-sm-12">
                         <div class="product-items-info">
                             <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-urad-rounds.png' %}"
-                                    alt="">
+                                <a href="/product-details/{{info.Slug}}"><img class="img-fluid"
+                                    src="{{info.Image1.url}}"
+                                    alt=""></a>
                                 <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Urad Rounds 30kgs & 50kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
+                                   <a href="/product-details/{{info.Slug}}"><h6 class="card-title text-center">{{info.Title}}</h6></a>
+                                    <p class="card-text text-justify">{{info.Short_desc}}</p>
                                     <div class="d-flex justify-content-center">
                                         <div class="prd-bottom ">
-                                            <a href="/product-details/" class="social-info">
+                                            <a href="/product-details/{{info.Slug}}" class="social-info">
                                                 <span class="lnr lnr-move"></span>
                                                 <p class="hover-text">view more</p>
                                             </a>
-                                            <a href="" class="social-info">
+                                            <a href="/product-details/{{info.Slug}}" class="social-info">
                                                 <span class="lnr ti-bag"></span>
                                                 <p class="hover-text">Shop Now</p>
                                             </a>
@@ -394,242 +157,7 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double -horse-urad-dall-thirty-kgs.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium MahaRaja Urad Dall 30kgs & 50kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="/product-details/" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double -horse-urad-gota-thirty-kg.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Maharani Urad Dall 30kg & 50kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-m2-bag.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Urad Chakki Dal (M2) 30kgs & 50kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double -horse-idly-rava-thirty-kgs.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Idly Ravva 30kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-husked-toor-dall-thirty-kgs-pack.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Toor Dall 30Kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-husked-chana-dall-thirty-kgs-pack.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Chana Dall 30kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-moong-dall-thirty-kgs-pack.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Moong Dall 30kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="countries-products col-lg-4 col-sm-12">
-                        <div class="product-items-info">
-                            <div class="single-product card p-4">
-                                <img class="img-fluid"
-                                    src="{% static 'assets/img/tdh-products/tenali-double-horse-husked-black-gram-thirty-kgs-pack.png' %}"
-                                    alt="">
-                                <div class="product-details">
-                                    <h6 class="card-title text-center">Premium Husked Black gram 30kgs</h6>
-                                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing
-                                        elit.
-                                        Mollitia deleniti itaque, voluptates ipsum fugit ab?</p>
-                                    <div class="d-flex justify-content-center">
-                                        <div class="prd-bottom ">
-                                            <a href="single-product.html" class="social-info">
-                                                <span class="lnr lnr-move"></span>
-                                                <p class="hover-text">view more</p>
-                                            </a>
-                                            <a href="" class="social-info">
-                                                <span class="lnr ti-bag"></span>
-                                                <p class="hover-text">Shop Now</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    {% endfor %}
 
                 </div>
             </div>
@@ -637,41 +165,6 @@
     </div>
     </div>
 </section>
-
-<div class="modal" id="productModl">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                    <h6>Product Details</h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal">X</button>
-            </div>
-
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-4  product-popup-slider owl-carousel">
-                        <img src="{% static 'assets/img/product-details/uradagota-sample-1.png' %}" alt="" width="268" height="100%">
-                        <img src="{% static 'assets/img/product-details/uradagota-sample-2.png' %}" alt="">
-                        <img src="{% static 'assets/img/product-details/uradagota-sample-3.png' %}" alt="">
-                        <img src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Gota-300x300.png' %}" alt="">
-                    </div>
-
-                    <div class="col-lg-8">
-                        <h2> Premium Idly Ravva 1Kg</h2>
-                        <p>Fine-textured semolina is used to make traditional South Indian idlis, offering a fluffy and nutritious breakfast option.</p>
-                    </div>
-
-                    <div class="modal-footer">
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
 
 <!---- End products section ---->
 {% endblock %}

@@ -24,16 +24,17 @@
 <section class="products-details-sec pt-5 pb-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 product-slider-item owl-carousel my-auto">
-                <img src="{% static 'assets/img/product-details/uradagota-sample-1.png' %}" alt="">
-                <img src="{% static 'assets/img/product-details/uradagota-sample-2.png' %}" alt="">
-                <img src="{% static 'assets/img/product-details/uradagota-sample-3.png' %}" alt="">
-                <img src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Gota-300x300.png' %}" alt="">
+            {% if Product_items %}
+            <div class="col-lg-4 product-slider-item owl-carousel">
+                <img src="{{Product_items.Image2.url}}" alt="Image">
+                <img src="{{Product_items.Image3.url}}" alt="">
+                <img src="{{Product_items.Image4.url}}" alt="">
+                <img src="{{Product_items.Image5.url}}" alt="">
             </div>
 
             <div class="col-lg-8">
                 <div class="products-head d-flex align-items-center justify-content-between">
-                    <h2 class="product-title">Premium Urad Gota 1Kg</h2>
+                    <h2 class="product-title">{{Product_items.Title}}</h2>
                     <!-- <i class="fas fa-heart"></i> -->
                 </div>
                 <div class="ct-rating-wrapper">
@@ -45,8 +46,7 @@
                         <i class="fas fa-star active"></i>
                     </div>
                 </div>
-                <p class="pt-3">Round Urad Gota is the choicest, procured from the best farms and fields in the country
-                    and packed under hygienic conditions.</p>
+                <p class="pt-3">{{Product_items.Short_desc}}</p>
 
                 <div class="product-variations">
                     <div class="product-size-wrapper">
@@ -58,130 +58,133 @@
                         </div>
                     </div>
                 </div>
-                <h4 class="pt-5"><strong>About this item</strong></h4>
+                <div class="pt-3">{{Product_items.Body | safe }}</div>
+                <!-- <h4 class="pt-5"><strong>About this item</strong></h4>
                 <p><strong>Brand:</strong> Tenali Double Horse</p>
                 <p><strong>Item Weight :</strong> 1 Kilograms</p>
                 <p><strong>Variety:</strong> Lentils</p>
-                <p><strong>Container Maximum Shelf Life:</strong> 4 Months</p>
-                <a class="genric-btn danger" href="#">ORDER NOW</a>
+                <p><strong>Container Maximum Shelf Life:</strong> 4 Months</p> -->
+                <a class="danger order-btn" target="_blank" href="{{Product_items.Upload_url}}">ORDER NOW</a>
+                
+
             </div>
 
             <div class="pt-5">
                 <a class="btn button-click">Description</a>
-                <p class="pt-4">Urad Gota is used for preparing idly, dosa, vada, and other Indian recipes. It is a
-                    protein-rich food, and its quality is determined by the softness of the batter and the taste of the
-                    recipe. Tenali Double Horse Urad Gota is the best choice as it is procured from the best farmers and
-                    fields across India. It is processed in hygienic conditions and packed in sustainable packing
-                    punches to ensure that the freshness lasts for a long time.</p>
+                <p class="pt-4">{{Product_items.Long_desc}}</p>
             </div>
+            {% endif %}
         </div>
 
         <h2>You might also like</h2>
 
         <div class="row mt-5">
-                <div class="col-lg-4">
-                    <div class="single-product single-item-details card p-3">
-                        <img class="img-fluid"
-                            src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Gota-300x300.png' %}" alt="">
-                        <div class="product-details">
-                            <h6 class="card-title text-center">Premium Urad Gota 1Kg</h6>
-                            <div class="ct-rating-wrapper">
-                                <div class="ct-rating text-center">
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                </div>
+            <div class="col-lg-4">
+                <div class="single-product single-item-details card p-3">
+                    <img class="img-fluid"
+                        src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Gota-300x300.png' %}"
+                        alt="">
+                    <div class="product-details">
+                        <h6 class="card-title text-center">Premium Urad Gota 1Kg</h6>
+                        <div class="ct-rating-wrapper">
+                            <div class="ct-rating text-center">
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
                             </div>
-                            <p class="card-text text-justify">Round Urad Gota is the choicest, procured from the best farms and fields in the country and packed under hygienic conditions.</p>
-                            <div class="d-flex justify-content-center">
-                                <div class="prd-bottom ">
-                                    <a href="/product-details/" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                    <!-- <a href="" class="social-info">
+                        </div>
+                        <p class="card-text text-justify">Round Urad Gota is the choicest, procured from the best farms
+                            and fields in the country and packed under hygienic conditions.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="prd-bottom ">
+                                <a href="/product-details/" class="social-info">
+                                    <span class="lnr lnr-move"></span>
+                                    <p class="hover-text">view more</p>
+                                </a>
+                                <!-- <a href="" class="social-info">
                                 <span class="lnr ti-bag"></span>
                                 <p class="hover-text">Shop Now</p>
                             </a> -->
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4"> 
-                    <div class="single-product single-item-details card p-3">
-                        <img class="img-fluid"
-                            src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Dall-300x300.png' %}" alt="">
-                        <div class="product-details">
-                            <h6 class="card-title text-center">High Protein Tenali Maharani Urad Gota 1kg</h6>
-                            <div class="ct-rating-wrapper">
-                                <div class="ct-rating text-center">
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                </div>
+            <div class="col-lg-4">
+                <div class="single-product single-item-details card p-3">
+                    <img class="img-fluid"
+                        src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Dall-300x300.png' %}"
+                        alt="">
+                    <div class="product-details">
+                        <h6 class="card-title text-center">High Protein Tenali Maharani Urad Gota 1kg</h6>
+                        <div class="ct-rating-wrapper">
+                            <div class="ct-rating text-center">
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
                             </div>
-                            <p class="card-text text-justify">Round Urad Dall is the choicest, procured from the best farms and fields in the country and packed under hygienic conditions.</p>
-                            <div class="d-flex justify-content-center">
-                                <div class="prd-bottom ">
-                                    <a href="/product-details/" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                    <!-- <a href="" class="social-info">
+                        </div>
+                        <p class="card-text text-justify">Round Urad Dall is the choicest, procured from the best farms
+                            and fields in the country and packed under hygienic conditions.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="prd-bottom ">
+                                <a href="/product-details/" class="social-info">
+                                    <span class="lnr lnr-move"></span>
+                                    <p class="hover-text">view more</p>
+                                </a>
+                                <!-- <a href="" class="social-info">
                                 <span class="lnr ti-bag"></span>
                                 <p class="hover-text">Shop Now</p>
                             </a> -->
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4">
-                    <div class="single-product single-item-details card p-3">
-                        <img class="img-fluid"
-                            src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Dal-300x300.png' %}" alt="">
-                        <div class="product-details">
-                            <h6 class="card-title text-center">Premium Urad Dall 1kg</h6>
+            <div class="col-lg-4">
+                <div class="single-product single-item-details card p-3">
+                    <img class="img-fluid"
+                        src="{% static 'assets/img/product-details/Tenali-Double-Horse-Urad-Dal-300x300.png' %}" alt="">
+                    <div class="product-details">
+                        <h6 class="card-title text-center">Premium Urad Dall 1kg</h6>
 
-                            <div class="ct-rating-wrapper">
-                                <div class="ct-rating text-center">
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                    <i class="fas fa-star active"></i>
-                                </div>
+                        <div class="ct-rating-wrapper">
+                            <div class="ct-rating text-center">
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
                             </div>
-                            
-                            <p class="card-text text-justify">Urad Dall is the choicest, procured from the best farms and fields in the country and packed under hygienic conditions.</p>
-                            <div class="d-flex justify-content-center">
-                                <div class="prd-bottom ">
-                                    <a href="/product-details/" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">view more</p>
-                                    </a>
-                                    <!-- <a href="" class="social-info">
+                        </div>
+
+                        <p class="card-text text-justify">Urad Dall is the choicest, procured from the best farms and
+                            fields in the country and packed under hygienic conditions.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="prd-bottom ">
+                                <a href="/product-details/" class="social-info">
+                                    <span class="lnr lnr-move"></span>
+                                    <p class="hover-text">view more</p>
+                                </a>
+                                <!-- <a href="" class="social-info">
                                 <span class="lnr ti-bag"></span>
                                 <p class="hover-text">Shop Now</p>
                             </a> -->
-                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
-
-
-
     </div>
 </section>
 <!---product details section end---->
+
 
 {% endblock %}
