@@ -56,7 +56,8 @@ style="background-image: url(/static/assets/img/contact/Contact-us-page-banner.p
         </div>
         <div class="col-lg-5">
             <div class="form-info">
-                <form id="submit-form" class="form-width shadow-form px-3 bg-light pb-4 pt-4" style="border-radius: 8px;">
+                <form id="submit-form" method="post" class="form-width shadow-form px-3 bg-light pb-4 pt-4" style="border-radius: 8px;">
+                    {% csrf_token %}
                     <div class="form-mess">
                         <p class="py-3 text-center text-danger form-title">We Value Your Input</p>
                     </div>
@@ -98,7 +99,7 @@ style="background-image: url(/static/assets/img/contact/Contact-us-page-banner.p
                         </div>
                     </div>
                     <!-- <a class="genric-btn danger" href="#" id="">Send Message</a> -->
-                    <button type="button" id="btn-submit" class="genric-btn danger">Send Message</button>
+                    <button type="button" id="btn-submit" class="danger">Send Message</button>
                 </form>
             </div>
         </div>
@@ -165,6 +166,7 @@ style="background-image: url(/static/assets/img/contact/Contact-us-page-banner.p
     </div>
     </div>
 </section>
+
 <!-- <section class="office-location-sec pt-5">
 <div class="container">
     <h2 class="head-title">Our Office & Factory Location</h2>

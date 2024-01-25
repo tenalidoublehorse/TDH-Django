@@ -26,13 +26,48 @@
 }
 
 
+
 $(document).ready(function(){
   $('#btn-submit').click(function(){
      let firstname = $('#fname').val()
      let lastname = $('#lname').val()
      let email = $('#email').val()
      let phonenumber = $('#phonenumber').val()
-     let purpose = $('')
+     let purpose = $('#purpose').val()
+     let subject = $('#subject').val()
+     let message = $('#message').val()
+     let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]').val()
+
+     let data = new FormData()
+     data.append('firstname',firstname),
+     data.append('lastname',lastname),
+     data.append('email',email),
+     data.append('phonenumber',phonenumber),
+     data.append('purpose',purpose),
+     data.append('subject',subject),
+     data.append('message',message),
+     data.append('csrfmiddlewaretoken',csrfmiddlewaretoken)
+
+     $.ajax({
+      type:'POST',
+      url:'/contact/',
+      processData:false,
+      contentType:false,
+      cache:false,
+      data:data,
+      success:function(data,status, xhr){
+        $('#submit-form')[0].reset();
+        if(data.success === true){
+          alert("Form data submitted successfull")
+        }else{
+          alert(data.error)
+          window.location.href = '/contact/'
+        } 
+      },
+      error:function(data){
+        alert("Data submitted failed")
+      }
+     })
   })
 })
 

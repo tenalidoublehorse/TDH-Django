@@ -24,12 +24,27 @@ class Products(models.Model):
     Image3 = models.ImageField(upload_to='uploads/')
     Image4 = models.ImageField(upload_to='uploads/')
     Image5 = models.ImageField(upload_to='uploads/')
+    Related_products = models.CharField(max_length=200,default="",null=True)
 
 
     def __str__(self):
           return self.Title
     
 
+
+class Contact(models.Model):
+      Firstname = models.CharField(max_length=100)
+      Lastname = models.CharField(max_length=100)
+      Email = models.CharField(max_length=50)
+      Phonenumber = models.CharField(max_length=10)
+      Purpose = models.CharField(max_length=100)
+      Subject = models.CharField(max_length=500)
+      Message = models.CharField(max_length=1000)
+
+      def __str__(self):
+            return self.Firstname
+
+    
 
 
 

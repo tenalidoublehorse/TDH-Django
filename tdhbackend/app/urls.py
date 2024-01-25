@@ -12,6 +12,7 @@ urlpatterns = [
    path('csr-gallery-two/', csr_gallery_two, name="csr_gallery_two"),
    path('tdh-products/', tdh_products, name="tdh_products"),
    path('product-details/<str:slug>', product_details, name="product_details"),
+   # path('product-details-two/', product_details_two, name="product_details_two"),
    path('news-room/', news_room, name="news_room"),
    path('news-room-two/', news_room_two, name="news_room_two"),
    path('news-room-three/', news_room_three, name="news_room_three"),

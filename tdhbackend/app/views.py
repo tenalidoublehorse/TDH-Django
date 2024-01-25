@@ -1,19 +1,18 @@
 import os
 from django.conf import settings
-from django.http import FileResponse
+from django.http import FileResponse, JsonResponse
 from django.shortcuts import get_object_or_404, render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 # Create your views here.
-from .models import BlogPost,Banner,IndusData,Products
+from .models import BlogPost,Banner,IndusData,Products,Contact
 from .serializers import  BlogPostSerializer,BannerSerializer,IndusfoodsSerializer
 
 
 def index(request):
     aBanner =  Banner.objects.all()
     Product_items = Products.objects.filter(Product_type='Consumer_pack')
-
     return render(request, 'uifiles/index.html', {'Product_items':Product_items, 'Banner':aBanner})
 
 
@@ -42,7 +41,13 @@ def tdh_products(request):
 
 def product_details(request,slug):
     Product_items = Products.objects.get(Slug=slug)
-    return render(request, 'uifiles/product-details.html', {'Product_items':Product_items})
+    get_related_items = []
+    related_items = [item.strip() for item in Product_items.Related_products.split(',')]
+    for item in related_items:
+            slug_items = Products.objects.get(Slug=item)
+            get_related_items.append(slug_items)
+    return render(request, 'uifiles/product-details-two.html', {'Product_items':Product_items,'related_products':get_related_items})
+
 
 def news_room(request):
     return render(request, 'uifiles/news-room.html')
@@ -54,6 +59,18 @@ def news_room_three(request):
     return render(request, 'uifiles/news-room-three.html')
 
 def contact(request):
+    if request.method == 'POST':
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('email')
+        phonenumber = request.POST.get('phonenumber')
+        purpose = request.POST.get('purpose')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        oContact = Contact(Firstname=firstname,Lastname=lastname,Email=email,Phonenumber=phonenumber,Purpose=purpose,Subject=subject,Message=message)
+        oContact.save()
+        return JsonResponse({'success':True})
+
     return render(request, 'uifiles/contact.html')
 
 

@@ -1,14 +1,15 @@
 from django.contrib import admin
-from .models import BlogPost,Banner,IndusData,Products
+from .models import BlogPost,Banner,IndusData,Products,Contact
 # Register your models here.
 
 import csv
 from django.http import HttpResponse
 
 class AdminProducts(admin.ModelAdmin):
-    list_display = ('Products_id','Title','Short_desc','Long_desc','Upload_url','Body','Slug','Image1','Image2','Image3','Image4','Image5')
+    list_display = ('Products_id','Title','Short_desc','Long_desc','Upload_url','Body','Slug','Image1','Image2','Image3','Image4','Image5','Related_products')
 
-
+class AdminContact(admin.ModelAdmin):
+    list_display = ('Firstname','Lastname','Email','Phonenumber','Purpose','Subject','Message')
 
 class AdminBlogpost(admin.ModelAdmin):
     list_display=('id','image','title','shortdesc','postdate','authorname')
@@ -34,6 +35,7 @@ class AdminIndusData(admin.ModelAdmin):
 
 
 admin.site.register(Products,AdminProducts)
+admin.site.register(Contact,AdminContact)
 admin.site.register(BlogPost,AdminBlogpost)
 admin.site.register(Banner,AdminBanner)
 admin.site.register(IndusData,AdminIndusData)
